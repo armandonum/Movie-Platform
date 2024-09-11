@@ -1,0 +1,16 @@
+name : CI pipeline
+on:
+  push:
+    branches:
+      - main
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+        - name: Checkout code
+          uses: actions/checkout@v2
+        - name: List files
+          run: ls -la
+        - name: hello message
+          run: echo "Hello, World!"
+          
